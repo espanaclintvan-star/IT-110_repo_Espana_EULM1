@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>activity 2</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: black;
+            background-color: lightgray;
+        }
+
+        header {
+            border-bottom: 2px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .navs{
+            font-style:normal;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px 0;
+            background-color: lightgoldenrodyellow;
+            border-radius: 10px;
+        
+        }
+        .navs a {
+            text-decoration:none;
+            color: black;
+        }
+        .navs a:hover {
+            text-decoration:solid;
+            color:grey;
+            font-weight: 500;
+        }
+        .click {
+            font-style: italic;
+            font-size: larger;
+            color: black;
+        }
+        .click a {
+            text-decoration: none;
+            color: black;
+        }
+        .click a:hover {
+            text-decoration:solid;
+            color:grey;
+            font-weight: 500;
+        }
+    </style>
+
+    <nav id="top" class="navs">
+        <a href="#images">images</a>
+        <a href="#hyperlinks">hyperlinks</a>
+        <a href="#multimedia">multimedia</a>
+        <a href="#useful-tags">usuful tags</a>
+        <a href="#html-dom">html dom</a>
+    </nav>
+    
+</head>
+<body>
+    <section id="images">
+            <h1>Graduation Designer</h1>
+            <figure>
+                <img src= "images\Copy of Yellow and Green Illustrated Nature Document (1).png" alt="1st design option for grade school graduation" width = "100" height="100">
+                <figcaption>Option 1. With camp, trees, land and sky</figcaption>
+            </figure>
+
+            <figure>
+                <img src= "images\Copy of Yellow and Green Illustrated Nature Document (2).png" alt="2nd design option for grade school graduation" width = "100" height="100">
+                <figcaption>Oprion 2. With trees, land and sky</figcaption>
+            </figure>
+
+            <figure>
+                <img src= "images\Copy of Yellow and Green Illustrated Nature Document.png" alt="3rd design option for grade school graduation" width = "100" height="100">
+                <figcaption>Option 3. With land and sky</figcaption>
+            </figure>
+
+    </section>
+      
+    <section id="hyperlinks">
+            
+            <h2>Hyperlinks</h2>
+            <div class="click">
+            <ul>
+                <!-- Internal Link -->
+                <li><a href="about.html">About</a></li>
+
+                <!-- External Link -->
+                <li><a href="https://www.pinterest.com/">More Options</a></li>
+                
+                <!-- Email Link -->
+                <li><a href="mailto:espanaclintvan@gmail.com">Contact Me via Email</a></li>
+                
+                <!-- Same-Page Anchor Link -->
+                <li><a href="#multimedia">Multimedia Section</a></li>
+            </ul>
+            </div>
+    </section>
+    
+    <section id="multimedia">
+            <h2>Below are the final prayer and graduation song</h2><br>
+            <figure>
+                <audio controls>
+                    <source src="media\IN THIS MOMENT - Alison Yap  Lyrics.mp3" type="audio/mpeg">
+                </audio>
+                <figcaption>Audio 1. The graduation song.</figcaption>
+            </figure>
+
+            <figure>
+                <video controls width="300" height="300">
+                    <source src="media\STILL (HILLSONG) _ PIANO INSTRUMENTAL WITH LYRICS _ PIANO COVER _ Original Key _ Key of C.mp4" type="video/mp4">
+                </video>
+                <figcaption>Video 1. The graduation prayer.</figcaption>
+            </figure>
+    </section>
+
+    <section id="useful-tags">
+        <h2>useful tags</h2>
+            
+            <!-- I chose <mark> to highlight important words-->
+        <p>Please double-check that your formal assembly forms are processed before the <mark>strict rehearsal deadline</mark> finishes.</p>
+
+            <!-- I chose <blockquote> to separate quote-->
+            <!-- I also used the &ldquo; and &rdquo for quotation marks-->
+            <blockquote>
+                &ldquo;Your education is a dress rehearsal for a life that is yours to lead. Go forth and configure your own custom pathways.&rdquo; 
+                <cite>&mdash; Commencement Address Quotes</cite>
+            </blockquote>
+
+            <!-- I chose <code> to format inline programming text-->
+        <p>To access the digital live-stream terminal portal on graduation day, type the unique validation key <code>GRAD2026</code> into the school registry interface.</p>
+    </section>
+
+    <section id="html-dom">
+        <h2>parent-child</h2>
+        <p id="relationship-analysis">
+            In this project layout, the parent-child relationships dictate how the elements are structured and nested. 
+            For instance, the <code>&lt;figure&gt;</code> element acts as a direct parent to the <code>&lt;img&gt;</code> element, which means any styles applied to the figure container can directly encapsulate or position the child image. 
+            Similarly, the <code>&lt;ul&gt;</code> (unordered list) element serves as the parent to multiple child <code>&lt;li&gt;</code> (list item) elements within the hyperlinks section. 
+            These nested structures allow the browser to parse the Document Object Model tree accurately, establishing a clear hierarchy where child elements inherit layout constraints from their direct parent containers.
+        </p>
+
+    </section>
+</body>
+
+<footer>
+    <div class="click">
+    <a href="#top">|back to top|</a>
+    </div>
+
+    <p>&copy; 2026 Graduation Planner. All Rights Reserved.</p>
+    <!--I added this to make it look like a legal web-->
+</footer>
+
+</html>
