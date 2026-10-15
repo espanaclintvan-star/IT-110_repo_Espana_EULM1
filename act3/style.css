@@ -1,0 +1,178 @@
+* { box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:rgb(255, 255, 255);
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1, h2{
+    font-weight: bold;
+    color: #000000;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.5rem;
+}
+nav a{
+    background-color: white;
+    border: solid black;
+    border-radius: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    display: inline-block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    color: black;
+
+}
+
+nav a:hover{
+    transform: translateY(-5px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Name{
+    font-size: 3rem;
+    text-align: center;
+    border: solid black;
+    background-image: url(icons/logo.jpeg);
+    background-repeat:no-repeat;
+    background-size: 3rem;
+}
+
+.card{
+    background-color: white;
+}
+
+.card{
+    border: 2px solid black;
+    border-radius: 25px;
+    margin: 0 auto 1.5rem auto;
+    padding: 1.5rem;
+    position:relative;
+    width: 70vw;
+}
+
+
+
+header, footer{
+    width: 100%;
+    text-align: center;
+}
+
+header{
+    min-height: 10vh;
+    padding: 1rem;
+}
+
+footer{
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+.home{
+    height: 4em; 
+    width: 4rem ;
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;  
+    z-index: 9999; 
+    border: solid black;
+    border-radius: 1rem;
+}
+
+.about{
+    background-image: url(icons/about.jpeg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+
+.skills{
+    background-image: url(icons/skills.jpeg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+
+.notes{
+    background-image: url(icons/notes.jpeg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+
+#about, #skills, #notes {
+    border-color:darkslategray;
+}
+
+#about, #skills, #notes {
+    position: relative;
+}
+
+#about::after, #skills::after, #notes::after {
+    content: "new";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.intro::first-letter{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.hide-none{
+    display: none;
+}
+
+.hide-visibility{
+    visibility: hidden;
+}
+
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+}
+
+.skills-list {
+    padding-top: 1rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+}
+
+.skills-list > li {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+/*
+1.
+    The #about, #skills, and #notes won compared to .card in border color
+    because the id's are more specific than class.
+ 
+2.
+    Total Rendered Width = 70vw 
+    Calculation: Width is exactly 70vw because 'box-sizing: border-box' includes 
+    the padding (1.5rem) and border (2px) inside the specified width dimension. 
+    I used vw so that any device sizes can view these cards in 70% width of their screens.
+
+3.
+    The 'display:none' shrinks the item out of existence leaving no empty gap and 
+    the 'visibility:hidden' retains layout boundaries hiding only the visual rendering
+*/
